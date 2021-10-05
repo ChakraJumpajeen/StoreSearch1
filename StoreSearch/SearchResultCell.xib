@@ -57,9 +57,9 @@
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="artistNameLabel" destination="flQ-74-aeG" id="MLE-1s-tIR"/>
+                <outlet property="artistNameLabel" destination="cf4-ZD-Qjx" id="pdA-O7-RJW"/>
                 <outlet property="artworkImageView" destination="St3-MR-woe" id="JNL-jO-AqX"/>
-                <outlet property="nameLabel" destination="cf4-ZD-Qjx" id="Cuh-kT-Whf"/>
+                <outlet property="nameLabel" destination="flQ-74-aeG" id="gvr-ee-etQ"/>
             </connections>
             <point key="canvasLocation" x="-19.199999999999999" y="-15.292353823088456"/>
         </tableViewCell>
