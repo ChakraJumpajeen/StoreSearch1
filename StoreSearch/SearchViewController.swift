@@ -162,17 +162,12 @@ extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
           spinner.startAnimating()
           return cell
         } else if searchResults.count == 0 {
-          return tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.nothingFoundCell, for: indexPath)
+            return tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.nothingFoundCell, for: indexPath)
         } else {
-          let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.searchResultCell, for: indexPath) as! SearchResultCell
-          let searchResult = searchResults[indexPath.row]
-          cell.nameLabel.text = searchResult.name
-          if searchResult.artist.isEmpty {
-            cell.artistNameLabel.text = "Unknown"
-          } else {
-            cell.artistNameLabel.text = String(format: "%@ (%@)", searchResult.artist, searchResult.type)
-          }
-          return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: TableView.CellIdentifiers.searchResultCell, for: indexPath) as! SearchResultCell
+            let searchResult = searchResults[indexPath.row]
+            cell.configure(for: searchResult)
+            return cell
         }
     }
     
